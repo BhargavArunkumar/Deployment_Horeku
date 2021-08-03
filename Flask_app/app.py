@@ -11,18 +11,8 @@ model = joblib.load('dib_79.pkl')
 def hello():
     return render_template('predict.html')
 
-@app.route('/home')
-
-def home():
-    return render_template('index.html')
-
-@app.route('/contact')
-
-def contact():
-    return 'Contact'
-
-
 @app.route('/submit', methods = ['POST'])
+
 def form_data():
     preg = request.form.get('preg')
     plas = request.form.get('plas')
